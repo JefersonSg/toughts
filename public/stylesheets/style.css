@@ -186,6 +186,10 @@ body {
   display: flex;
   align-items: center;
 }
+#search{
+  color: white;
+}
+
 .busca .btn{
   margin: 0;
 }
@@ -201,7 +205,6 @@ body {
 
 .home-header h1{
   margin-bottom: 1em;
-  width: max-content;
   font-size: 34px;
 }
 @media (max-width:400px) {

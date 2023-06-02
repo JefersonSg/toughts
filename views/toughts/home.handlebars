@@ -1,18 +1,32 @@
 <div class="home-header">
-  <h1>Todos os pensamentos</h1>
+  {{#if search}}
+  <h1>Você está buscando por: <span>{{search}}</span></h1>
+    {{#if toughtsQty}}
+    <p>Foram encontrados <span>{{toughtsQty}}</span>pensamentos</p>
+    {{else}}
+    <p><span>Nada foi encontrado nesta busca</span></p>
+    {{/if}}
+  {{else}}
+  <h1>Vejá oque as pessoas estão <span>Pensando</span></h1>
+  {{/if}}
+
   <form class="busca" action="/" method="get">
-    <input type="text" name="searsh" id="searsh" placeholder="Está buscanco por algo?">
+    {{#if search}}
+  <input type="text" name="search" id="search" placeholder="Está buscanco por algo?" value="{{search}}">
+  {{else}}
+  <input type="text" name="search" id="search" placeholder="Está buscanco por algo?">
+  {{/if}}
     <button type="submit" class="btn">Buscar</button>
   </form>
   <div class="order-container">
     <span>Ordenar por:</span>
     <form action="/" method="get">
-      <input type="hidden" name="searsh" value="{{this.searsh}}">
+      <input type="hidden" name="search" value="{{this.search}}">
       <input type="hidden" name="order" value="new">
       <button type="submit"><i class="bi bi-arrow-up"></i></button>
     </form>
     <form action="/" method="get">
-      <input type="hidden" name="searsh" value="{{this.searsh}}">
+      <input type="hidden" name="search" value="{{this.search}}">
       <input type="hidden" name="order" value="old">
       <button type="submit"><i class="bi bi-arrow-down"></i></button>
     </form>
