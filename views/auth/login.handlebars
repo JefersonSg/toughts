@@ -1,0 +1,19 @@
+<div class="auth-container">
+  <h2>Entre na sua conta</h2>
+  <form action="/auth/login" method="post">
+
+    <div class="form-control">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="Digite o seu e-mail" required>
+    </div>
+    <div class="form-control">
+      <label for="password">Senha:</label>
+      <input type="password" name="password" id="password" placeholder="Digite a sua senha" required>
+    </div>
+
+    <div class="container-button">
+      <button class="botao-form" type="submit">Entrar</button>
+    </div>
+  </form>
+  <p class="entrar">Não tem conta? <a href="/auth/register">Crie agora!</a></p>
+</div>
