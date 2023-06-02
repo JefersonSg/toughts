@@ -182,18 +182,32 @@ body {
 
 
 /*  home */
+.busca{
+  display: flex;
+  align-items: center;
+}
+.busca .btn{
+  margin: 0;
+}
 
 .home-header {
   display: flex;
   flex-direction: column;
   max-width: 60%;
-  min-width: 210px;
+  min-width: 265px;
   margin: 0 auto;
   text-align: center;
 }
 
 .home-header h1{
   margin-bottom: 1em;
+  width: max-content;
+  font-size: 34px;
+}
+@media (max-width:400px) {
+  .home-header h1{
+    font-size: 26px;
+  }
 }
 .home-header span {
   color: #f6982d;
@@ -356,6 +370,9 @@ body {
 
 .dashboard ul li{
   display: flex;
+  width: 100%;
+  max-width: 600px;
+  min-width: 280px;
   align-items: center;
   padding: 12px;
   border-bottom: 1px solid #f6982d;
@@ -364,25 +381,37 @@ body {
 
 .edit-form{
   display: flex;
-  width: 100%;
+  width: 80%;
   align-items: center;
   box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
 }
 
-.edit-form .form-control,.edit-form .form-control input{
+.edit-form #title,.edit-form .form-control input{
   margin: 0;
 }
+
+.edit-form #title{
+    width: 30%;
+    min-width: 50px;
+    padding: 10px 16px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid white;
+    margin-top: 4px;
+    color: #f6982d;
+}
+
 
 .actions {
   display: flex;
   gap: 20px;
 }
-
-.enviEdit {
-  margin-right: 20px;
+.enviEdit{
+margin-right: 15px;
 }
+
 .dashboard ul li .btn {
   margin-bottom: 0;
   border-color: #FFF;

@@ -16,12 +16,10 @@ edits.forEach((botao) => {
     li.innerHTML = `
       <form class='edit-form' action="/toughts/edit" method="post">
       <input type="hidden" name="id" value="${infos['id']}">
-      <div class="form-control">
         <input type="text" name="title" id="title" placeholder="O que você vai fazer?" value="${infos['title']}">
-      </div>
 
       <div class="actions">
-        <button class="btn enviEdit" type="submit">Concluir Edição</button>
+        <button class="btn enviEdit" type="submit">Concluir</button>
       </div>
     </form>
     <form action="/toughts/delete" method="post">
