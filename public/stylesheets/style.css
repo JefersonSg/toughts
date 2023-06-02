@@ -100,7 +100,8 @@ body {
   grid-template-rows: max-content max-content max-content;
   height: max-content;
   max-height: max-content;
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   margin: 0 auto;
   border: 5px solid #fff;
   padding: 20px 0;
@@ -150,10 +151,18 @@ body {
   color: #2B2B2B;
   font-size: 14px;
   font-weight: 700;
+  text-align: center;
   transition: all .3s;
   cursor: pointer;
-  text-transform: uppercase;
   text-decoration: none;
+}
+@media (max-width:400px) {
+  .botao-form {
+    display: grid;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
 }
 
 .botao-form:hover {
@@ -178,6 +187,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 60%;
+  min-width: 210px;
   margin: 0 auto;
   text-align: center;
 }
@@ -206,7 +216,7 @@ body {
   border-color: #f6982d;
 }
 .home-header input[type='text'] {
-  width: 60%;
+  width: 70%;
 }
 
 .home-header input::placeholder{
@@ -243,7 +253,8 @@ body {
 .toughts-container figure{
   border-bottom: 1px solid #333;
   padding: .5em;
-  max-width: 50%;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto 1em;
 }
 
